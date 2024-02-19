@@ -5,13 +5,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><%= htmlWebpackPlugin.options.title %></title>
+    <style>
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+      button {
+        padding: 10px 20px;
+        font-size: 20px;
+        cursor: pointer;
+      }
+      input {
+        padding: 10px 20px;
+        margin-bottom: 10px;
+      }
+    </style>
   </head>
   <body>
     <div class="container">
-      <img id="laughImg" alt="" />
-      <h3>Webpack Starter Changed</h3>
-      <div id="joke" class="joke"></div>
-      <button id="jokeBtn" class="btn">Get Another Joke</button>
+      <h3>Fine grained reactivity with Rxjs</h3>
+      <h1 id="counter">0</h1>
+      <button id="inc">+</button>
+      <div>
+        <h3>Person</h3>
+        <p id="name-view">Name: </p>
+        <p id="age-view">Age: </p>
+      </div>
+      <div>
+        Name:
+        <input type="text" id="name-input">
+      </div>
+      <div>
+        Age:
+        <input type="number" id="age-input">
+      </div>
+      <div>
+        <button id="update">Update</button>
+      </div>
     </div>
   </body>
 </html>

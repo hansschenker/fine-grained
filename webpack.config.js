@@ -25,6 +25,7 @@ module.exports = {
     compress: true,
     historyApiFallback: true,
   },
+  resolve: { extensions: ['.ts', '.js']},
   module: {
     rules: [
       {
